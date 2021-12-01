@@ -1,0 +1,237 @@
+:root {
+    --primaryColor: #1073ba;
+    --secondaryColor: #00da55;
+    --gray: #3b3b3b;
+    --white: #fff;
+    --black: #1f1e1e;
+    --lightGrey: #e1e1e1;
+
+    --separation: 5rem;
+    
+    --principalFont: 'Roboto', sans-serif;
+    --secondaryFont: 'Lato', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+ body {
+     font-family: var(--principalFont);
+     line-height: 1.5;
+     background-color: var(--white);
+ }
+
+ /**globales**/
+
+ .conteiner {
+     max-width: 120rem;
+     width: 90%;
+     margin: 0 auto;
+
+ }
+
+ h1, h2, h3 {
+     font-weight: 900;
+     font-family: var(--secondaryFont);
+     margin: calc( var(--separation) / 2 ) 0;
+ }
+
+ h1 {
+     font-size: 4.4rem;
+ }
+
+ h2 {
+     font-size: 3.6rem;
+ }
+
+ h3 {
+     font-size: 2.8rem;
+ }
+
+ img {
+     max-width: 100%;
+     display: block;
+     height: auto;
+ }
+
+ /**utilidades**/
+
+ .text-center{
+     text-align: center;
+ }
+
+ /**degradados**/
+ .degraded-green {
+     color: transparent;
+     background: linear-gradient(to right, var(--primaryColor) 0%, var(--secondaryColor) 100%);
+     -webkit-background-clip: text;
+     background-clip: text;
+ }
+ /**header**/
+.header{
+    background-color: var(--black);
+    padding: calc( var(--separation) * 3 ) 0;
+    color: var(--white);
+}    
+ 
+@media (min-width: 768px) {
+    .content-header{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.text-header {
+    text-align: center;
+    padding-top: var(--separation);
+}
+
+
+@media (min-width: 768px) {
+    .text-header {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+    }
+}
+
+.text-header p {
+    margin: 0;
+}
+
+.tagline-product {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.name-product {
+    font-size: 6rem;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .name-product {
+        line-height: 1;
+        
+        font-size: 10rem;
+    }
+     
+}
+
+.price-product span {
+    font-size: 8rem;
+    font-weight: 900;
+}
+
+.price-product {
+    font-size: 1.5rem;
+}
+
+.description-product {
+    font-size: 1.5rem;
+}
+
+
+/**icons**/
+.icons {
+    padding: var(--separation) 0;
+}
+@media (min-width: 770px) {
+    .icons {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--separation) / 2 ;
+}
+
+.icon:last-of-type{
+    margin: 0;
+}
+
+@media (min-width: 770px) {
+    .icon:last-of-type{
+        margin: 0;
+    }
+}
+.icon img {
+    width: 7rem;
+    margin: 0 auto;
+}
+
+.icon h3 {
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    margin-top: calc( var(--separation) / 2 );
+}
+
+.icon p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@media (min-width: 770px) {
+    .icon p {
+        font-size: 1.5rem;
+    }
+}
+
+/**Sobre techPRO**/
+
+.about-tech {
+    background-image: linear-gradient( to bottom, transparent 50%, var(--primaryColor) 0%), url(../img/imagen-mujer.jpg);
+    background-position: right;
+    background-repeat: repeat, no-repeat;
+    background-size: 100%, 110rem;
+}
+
+@media (min-width: 770px) {
+    .about-tech {
+        background-image: linear-gradient( to left, transparent 50%, var(--primaryColor) 0%), url(../img/imagen-mujer.jpg);
+       
+    }
+}
+
+.about-tech-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 40rem);
+    row-gap: var(--separation);
+}
+
+@media (min-width: 770px) {
+    .about-tech-grid{
+        grid-template-rows: unset;
+        row-gap: unset;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        padding: calc(var(--separation) * 2) 0;
+    }
+}
+
+.text-about-tech {
+    grid-row: 2 / 3;
+    color: var(--white);
+    font-size: 4rem;
+}
+
+.text-about-tech h2 {
+    font-size: 4rem;
+}
+
+.text-about-tech p {
+    font-size: 2rem;
+    line-height: 1.5;
+}
